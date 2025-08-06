@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun Yaaaa</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Musik -->
+  <audio autoplay loop>
+    <source src="ultah.mp3" type="audio/mpeg" />
+    Browser Anda tidak mendukung pemutar audio.
+  </audio>
+
+  <!-- Kartu Ucapan -->
+  <div class="card">
+    <div class="imgBox">
+      <div class="bark"></div>
+      <img src="https://image.ibb.co/fYzTrb/lastofus.jpg" alt="Foto utama" />
+    </div>
+    <div class="details">
+      <h4 class="color1">POKOKNYA YANG TERBAIK UNTUKMU</h4>
+      <h4 class="color2">SYARIIII</h4>
+      <h4 class="color2">SYARIFATUN KHASANAH</h4>
+      <p>Teruntukmu, 7 Agustus 2025</p>
+      <p>Liat, kamu udah mulai tambah dewasa sekarang</p>
+      <p>Selamat di usia 19 tahun nya yaaa</p>
+      <p>Aku tahu ko banyak cobaan yang kamu alami</p>
+      <p>Tapi liat, kamu masih kuat sampai saat ini</p>
+      <p>Jangan menyerah yaah? Janjiii?</p>
+      <p>Ingat nggak, dulu kamu bilang mau jadi apoteker?</p>
+      <p>Katanya biar bisa bantu nyembuhin banyak orang?</p>
+      <p>Aku aja sampai kagum sama niatmu itu. Keren!</p>
+      <p>Kejar terus ya impianmu itu, buktiin kalau kamu bisa :)</p>
+      <p>Okeeiii?</p>
+      <p class="text-right">Selamat ulang tahun ya cantikkk</p>
+      <p class="text-right">dari Crisman</p>
+    </div>
+  </div>
+
+  <!-- Slideshow Foto -->
+  <section class="slideshow-section">
+    <h2 style="text-align: center; font-family: 'Amatic SC', cursive;">Random Foto</h2>
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="foto1.jpg" alt="Foto 1" /></div>
+      <div class="slide fade"><img src="foto2.jpg" alt="Foto 2" /></div>
+      <div class="slide fade"><img src="foto3.jpg" alt="Foto 3" /></div>
+      <div class="slide fade"><img src="foto4.jpg" alt="Foto 4" /></div>
+      <div class="slide fade"><img src="foto5.jpg" alt="Foto 4" /></div>
+      <div class="slide fade"><img src="foto6.jpg" alt="Foto 4" /></div>
+      <div class="slide fade"><img src="foto7.jpg" alt="Foto 4" /></div>
+    </div>
+  </section>
+
+  <!-- Form Kirim Ucapan -->
+<section id="ucapan">
+  <h2>Kirim Ucapan</h2>
+  <form id="formUcapan" action="https://formspree.io/f/yourFormID" method="POST">
+    <input type="text" name="nama" placeholder="Nama Kamu" required>
+    <textarea name="ucapan" rows="4" placeholder="Tulis ucapan kamu di sini..." required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <!-- Opsional: status pesan -->
+  <p id="status">Terima kasih atas ucapannya!</p>
+</section>
+
+  <!-- Script Slideshow -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // ganti foto tiap 4 detik
+    }
+  </script>
+
+</body>
+</html>
