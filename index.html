@@ -13,10 +13,11 @@
 
 <body>
   <!-- Musik -->
-  <audio autoplay loop>
-    <source src="ultah.mp3" type="audio/mpeg" />
-    Browser Anda tidak mendukung pemutar audio.
-  </audio>
+<audio id="bgmusic" loop>
+  <source src="ultah.mp3" type="audio/mpeg">
+</audio>
+<button onclick="document.getElementById('bgmusic').play()" style="font-family: Indie Flower;">Putar Musik</button>
+
 
   <!-- Kartu Ucapan -->
   <div class="card">
@@ -90,3 +91,4 @@
 
 </body>
 </html>
+
